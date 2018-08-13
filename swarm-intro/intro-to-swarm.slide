@@ -85,4 +85,4 @@ operational perspective
     git clone https://github.com/dustin-decker/talks.git
     cd talks/swarm-intro
     ls *.sh
-    ./01-init-swarm.sh
+    ./01-init-swarm.sh # run with -dn to prevent the script from waiting

@@ -41,23 +41,23 @@ p "# here is a look into our container PID namespace"
 pe "docker exec -it test-isolation ps aux"
 
 p "# here is the host PID namespace for contrast"
-pe "ps aux"
+pe "ps aux | less"
 
 p "# this is the container's network namespace"
-pe "docker exec -it test-isolation ip a"
+pe "docker exec -it test-isolation ifconfig"
 
 p "# and the host's network namespace"
-pe "ifconfig"
+pe "ifconfig | less"
 
 p "# this is the container's mount namespace"
 pe "docker exec -it test-isolation mount"
 
 p "# and the host's mount namespace"
-pe "mount"
+pe "mount | less"
 
 p "# the container's UTS namespace"
 pe "docker exec -it test-isolation hostname"
 p "# and the host's UTS namespace"
 pe "hostname"
 
-pe "docker container rm test-isolation"
+pe "docker container rm -f test-isolation"
