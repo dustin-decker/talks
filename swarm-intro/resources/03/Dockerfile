@@ -18,7 +18,7 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifi
 COPY --from=builder /etc/passwd /etc/passwd
 # copy our deployable
 COPY --from=builder /go/src/github.com/dustin-decker/talks/swarm/resources/03/app .
-EXPOSE 80
+EXPOSE 8000
 # drop privileges
 USER container-user
 ENTRYPOINT ["/app"]
