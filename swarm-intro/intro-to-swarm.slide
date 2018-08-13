@@ -1,0 +1,88 @@
+Intro to Docker Swarm
+
+Dustin Decker
+dustin-decker@protonmail.com
+https://github.com/dustin-decker/talks/swarm-intro
+
+* OCI container image
+
+https://github.com/opencontainers/image-spec
+
+.image resources/image-diagram.png
+
+- layered filesystem - layers can be shared
+- standard interface for configuration accross platforms
+
+* OCI container runtime
+
+https://github.com/opencontainers/runtime-spec
+
+- spec details how a runtime should run a container from an OCI image
+- OCI runtime implementations include:
+    - runc (used by containerd + docker)
+    - runv (run OCI image under hypervisor)
+    - kata containers (another hypervisor based runtime)
+    - gvisor (user-space kernel interface)
+
+* hypervisor based containers?
+
+.image resources/kata-arch.jpg
+
+* isolation in containers
+
+- limit syscalls with *seccomp*
+- limit CPU and memory with *cgroups*
+- container has its own *rootfs* (via chroot and mounts)
+- container shares host kernel, but with *kernel namespaces* isolation:
+    - PID
+    - network
+    - mounts
+    - UTS (hostname)
+    - User (root container UID to host UID)
+
+* Docker daemon overview
+
+.image resources/docker-daemon.png _ 400
+
+* service -> container -> image
+
+* what's good about containers
+
+developer perspective 
+
+- easy and familiar way to build, distribute, and run an application
+- able to use whatever libs need
+
+operational perspective
+
+- same concerns as developer, but also:
+    - consistent interfaces for configuration and logging
+    - efficient resource utilization
+
+* orchestrators
+
+- distribute and manage applications over a pool of compute resources
+- typically arrange network connectivity
+- configuration drives automatic orchestration of complex systems
+
+
+* docker swarm orchestrator
+
+- resource scheduling
+- automatic deployments
+- configuration-driven networking (encrypted overlay)
+- service discovery and load balancing (service name as hostname)
+- healthchecks
+- logging
+
+* interactive introduction to Docker and Swarm
+
+- Turn your computer into a one-node swarm
+- Connect services with encrypted overlay networks
+- Build and deploy a simple application stack
+- Explore container isolation
+
+    git clone https://github.com/dustin-decker/talks.git
+    cd talks/swarm-intro
+    ls *.sh
+    ./01-init-swarm.sh
