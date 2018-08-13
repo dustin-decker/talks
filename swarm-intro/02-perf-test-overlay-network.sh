@@ -3,7 +3,7 @@
 ########################
 # include the magic
 ########################
-. lib.sh
+. ./resources/lib.sh
 
 
 ########################
@@ -13,7 +13,7 @@
 #
 # speed at which to simulate typing. bigger num = faster
 #
-TYPE_SPEED=45
+TYPE_SPEED=75
 
 #
 # custom prompt
@@ -28,12 +28,16 @@ clear
 
 # put your demo awesomeness here
 
+echo "Docker Swarm introduction"
+echo "02 - testing an encrypted overlay network"
+echo "Press ENTER to begin"
+
 p "# Docker Swarm has a simple CLI you can use for quick testing"
 p "# let's run an iperf benchmark over our encrypted overlay network"
 
 p "# first, create an encrypted overlay network"
-p "# "
 pe "docker network create --opt encrypted --driver overlay perf-test"
+pe "docker network ls"
 
 p "# now create the server component of the benchmark"
 pe "docker service create --name perf-test-a --network perf-test nicolaka/netshoot iperf -s -p 9999"
@@ -43,10 +47,8 @@ pe "docker service create --name perf-test-b --network perf-test nicolaka/netsho
 
 pe "docker service ls"
 
-pe "docker service logs perf-test-b"
-
 pe "docker service logs perf-test-a"
-
+pe "docker service logs perf-test-b"
 
 pe "docker service rm perf-test-a"
 pe "docker service rm perf-test-b"

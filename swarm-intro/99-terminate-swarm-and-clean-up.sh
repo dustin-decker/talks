@@ -3,7 +3,7 @@
 ########################
 # include the magic
 ########################
-. lib.sh
+. ./resources/lib.sh
 
 
 ########################
@@ -13,7 +13,7 @@
 #
 # speed at which to simulate typing. bigger num = faster
 #
-TYPE_SPEED=45
+TYPE_SPEED=75
 
 #
 # custom prompt

@@ -3,7 +3,7 @@
 ########################
 # include the magic
 ########################
-. lib.sh
+. ./resources/lib.sh
 
 
 ########################
@@ -13,7 +13,7 @@
 #
 # speed at which to simulate typing. bigger num = faster
 #
-TYPE_SPEED=45
+TYPE_SPEED=75
 
 #
 # custom prompt
@@ -28,22 +28,28 @@ clear
 
 # put your demo awesomeness here
 
+echo "Docker Swarm introduction"
+echo "03 - building and deloying a simple service stack"
+echo "Press ENTER to begin"
+
 p "# now we're going to deploy a service stack."
 p "# a service stack is defined by the docker-compose file spec"
 p "# v3 spec: https://docs.docker.com/compose/compose-file"
 
 p "# first lets build our application and our container image"
-pe "less resources/03/whoami.go"
-pe "less resources/03/Dockerfile"
-pe "docker build -f resources/03/Dockerfile -t dustin-decker/whoami ./resources/03"
+pe "cd resources/03"
+pe "less whoami.go"
+pe "less Dockerfile"
+pe "docker build -t dustin-decker/whoami ."
 pe "docker image ls"
-pe "docker image history --no-trunc dustin-decker/whoami"
 
 p "# now we deploy the service stack that uses that image"
-pe "less resources/03/service-stack.yml"
-pe "docker stack deploy -c resources/03/service-stack.yml test-stack"
+pe "less service-stack.yml"
+pe "docker stack deploy -c service-stack.yml test-stack"
 pe "docker stack ls"
-pe "docker stack ps test-stack"
+pe "watch docker stack ps test-stack"
 
 p "# loadbalancing demonstration on the published port"
-pe "for i in L O L; do curl 127.0.0.1:666; done"
+pe "for i in {0..10}; do curl 127.0.0.1:666; done"
+
+pe "docker stack rm test-stack"

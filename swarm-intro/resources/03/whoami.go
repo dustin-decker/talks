@@ -12,7 +12,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Printf("starting at :80")
+	fmt.Printf("starting at :8000")
 	http.HandleFunc("/", hello)
-	http.ListenAndServe("0.0.0.0:80", nil)
+	fmt.Println(http.ListenAndServe("0.0.0.0:8000", nil))
 }

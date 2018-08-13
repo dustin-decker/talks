@@ -3,7 +3,7 @@
 ########################
 # include the magic
 ########################
-. lib.sh
+. ./resources/lib.sh
 
 
 ########################
@@ -28,12 +28,16 @@ clear
 
 # put your demo awesomeness here
 
+echo "Docker Swarm introduction"
+echo "01 - initializing a Swarm"
+echo "Press ENTER to begin"
+
 p "# let's make a swarm"
 
 pe "docker swarm init"
 
-p "# that's it. you have a one node swarm now."
-
-pe "docker info "
+pe "docker info | less"
 
 pe "docker swarm --help"
+
+pe "docker node ls"
