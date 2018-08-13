@@ -1,0 +1,10 @@
+version 3.3
+
+services:
+  whoami:
+    image: dustin-decker/whoami
+    ports:
+      - 127.0.0.1:666:80
+    deploy:
+      mode: replicated
+      replicas: 5
