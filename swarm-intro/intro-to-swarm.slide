@@ -76,6 +76,13 @@ operational perspective
 - healthchecks
 - logging
 
+* pairs well with CI/CD
+
+- commits in git branch trigger build, test, and deploy pipelines
+- re-run previous deploy pipelines to restore previous configuration of the system
+
+
+
 * interactive introduction to Docker and Swarm
 
 - Turn your computer into a one-node swarm
