@@ -28,6 +28,6 @@ pe "docker stack ls"
 pe "watch docker stack ps test-stack"
 
 p "# loadbalancing demonstration on the published port"
-pe "for i in {0..10}; do curl 127.0.0.1:666; done"
+pe "for i in {0..5}; do curl 127.0.0.1:666; echo '\n'; done"
 
 pe "docker stack rm test-stack"

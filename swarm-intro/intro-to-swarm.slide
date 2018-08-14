@@ -3,8 +3,9 @@ Aug 2018
 Tags: docker, swarm, containers
 
 Dustin decker
-dustin-decker@protonmail.com
+dustindecker@protonmail.com
 https://github.com/dustin-decker/talks/tree/master/swarm-intro
+
 
 * OCI container image
 
@@ -14,6 +15,7 @@ https://github.com/opencontainers/image-spec
 
 - layered filesystem - layers can be shared
 - standard interface for configuration accross platforms
+
 
 * OCI container runtime
 
@@ -30,6 +32,7 @@ https://github.com/opencontainers/runtime-spec
 
 .image resources/slides/kata-arch.jpg
 
+
 * isolation in containers
 
 - limit syscalls with *seccomp*
@@ -42,9 +45,11 @@ https://github.com/opencontainers/runtime-spec
     - UTS (hostname)
     - User (root container UID to host UID)
 
+
 * Docker daemon overview
 
 .image resources/slides/docker-daemon.png _ 400
+
 
 * what's good about containers
 
@@ -58,6 +63,7 @@ operational perspective
 - includes same concerns as developer
 - consistent interfaces for configuration and logging
 - efficient resource utilization
+
 
 * orchestrators
 
@@ -80,7 +86,6 @@ operational perspective
 
 - commits in git branch trigger build, test, and deploy pipelines
 - re-run previous deploy pipelines to restore previous configuration of the system
-
 
 
 * interactive introduction to Docker and Swarm
