@@ -50,9 +50,9 @@ The second part of the session is optionally interactive. You can watch, but par
 
 If you wish to participate in the second part of the session, please do this ahead of time:
 
-1. Clone the repo: 
+1. Clone the repo:
     `git clone https://github.com/dustin-decker/talks.git`
-2. Cache the Docker images: 
+2. Cache the Docker images:
     `cd talks/swarm-intro/; ./00-cache-images.sh`
 3. Before the presentation begins, pull the latest changes:
     `git pull`
