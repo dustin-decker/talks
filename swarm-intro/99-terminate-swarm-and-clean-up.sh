@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-########################
-# include the magic
-########################
 . ./resources/lib.sh
-
-# hide the evidence
 clear
 
-# put your demo awesomeness here
+# put your demo awesomeness below here
+
 
 p "# time to take down the swarm"
 pe "docker swarm leave --force"

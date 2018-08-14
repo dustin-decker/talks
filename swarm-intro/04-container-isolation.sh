@@ -1,32 +1,10 @@
 #!/usr/bin/env bash
 
-########################
-# include the magic
-########################
 . ./resources/lib.sh
-
-
-########################
-# Configure the options
-########################
-
-#
-# speed at which to simulate typing. bigger num = faster
-#
-TYPE_SPEED=75
-
-#
-# custom prompt
-#
-# see http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html for escape sequences
-#
-DEMO_PROMPT="${GREEN}➜ ${CYAN}\W "
-
-# hide the evidence
 clear
 
+# put your demo awesomeness below here
 
-# put your demo awesomeness here
 
 echo "Docker Swarm introduction"
 echo "04 - explore container isolation"
@@ -61,3 +39,6 @@ p "# and the host's UTS namespace"
 pe "hostname"
 
 pe "docker container rm -f test-isolation"
+
+p "# set PID limit and blow a fork bomb"
+pe "docker run --rm -it --pids-limit=5 ubuntu bash -c ':(){ :|: & };:'"

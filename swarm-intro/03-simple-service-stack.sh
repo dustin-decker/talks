@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
-########################
-# include the magic
-########################
 . ./resources/lib.sh
-
-# hide the evidence
 clear
 
+# put your demo awesomeness below here
 
-# put your demo awesomeness here
 
 echo "Docker Swarm introduction"
 echo "03 - building and deloying a simple service stack"
