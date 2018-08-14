@@ -143,14 +143,14 @@ function check_pv() {
 
     echo ""
     echo -e "${RED}##############################################################"
-    echo "# HOLD IT!! I require pv but it's not installed.  Aborting." >&2;
+    echo "# HOLD IT!! I require pv and watch but it's not installed.  Aborting." >&2;
     echo -e "${RED}##############################################################"
     echo ""
-    echo -e "${COLOR_RESET}Installing pv:"
+    echo -e "${COLOR_RESET}Installing pv and watch:"
     echo ""
-    echo -e "${BLUE}Mac:${COLOR_RESET} $ brew install pv"
+    echo -e "${BLUE}Mac:${COLOR_RESET} $ brew install pv watch"
     echo ""
-    echo -e "${BLUE}Other:${COLOR_RESET} http://www.ivarch.com/programs/pv.shtml"
+    echo 'Installing brew: $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
     echo -e "${COLOR_RESET}"
     exit 1;
   }

@@ -57,9 +57,9 @@ developer perspective
 
 operational perspective
 
-- same concerns as developer, but also:
-    - consistent interfaces for configuration and logging
-    - efficient resource utilization
+- includes same concerns as developer
+- consistent interfaces for configuration and logging
+- efficient resource utilization
 
 * orchestrators
 
