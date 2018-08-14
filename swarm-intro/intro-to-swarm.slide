@@ -8,7 +8,7 @@ https://github.com/dustin-decker/talks/swarm-intro
 
 https://github.com/opencontainers/image-spec
 
-.image resources/image-diagram.png
+.image resources/slides/image-diagram.png
 
 - layered filesystem - layers can be shared
 - standard interface for configuration accross platforms
@@ -26,14 +26,14 @@ https://github.com/opencontainers/runtime-spec
 
 * hypervisor based containers?
 
-.image resources/kata-arch.jpg
+.image resources/slides/kata-arch.jpg
 
 * isolation in containers
 
 - limit syscalls with *seccomp*
 - limit CPU and memory with *cgroups*
 - container has its own *rootfs* (via chroot and mounts)
-- container shares host kernel, but with *kernel namespaces* isolation:
+- container shares host kernel, but with kernel *namespaces* isolation:
     - PID
     - network
     - mounts
@@ -42,9 +42,9 @@ https://github.com/opencontainers/runtime-spec
 
 * Docker daemon overview
 
-.image resources/docker-daemon.png _ 400
+.image resources/slides/docker-daemon.png _ 400
 
-* service -> container -> image
+* stacks -> services -> containers -> images
 
 * what's good about containers
 

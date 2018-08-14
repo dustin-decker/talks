@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  rce:
+    image: dustin-decker/rce
+    ports:
+      - 127.0.0.1:666:8000
+    deploy:
+      mode: replicated
+      replicas: 5 
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 64M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
