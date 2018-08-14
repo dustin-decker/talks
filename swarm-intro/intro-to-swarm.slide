@@ -81,6 +81,7 @@ operational perspective
 - Connect services with encrypted overlay networks
 - Build and deploy a simple application stack
 - Explore container isolation
+- Exploit a RCE vuln in two different deploy scenarios
 
     git clone https://github.com/dustin-decker/talks.git
     cd talks/swarm-intro
