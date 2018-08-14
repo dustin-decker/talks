@@ -32,3 +32,28 @@ Press ENTER to begin
 ```
 
 run with `-dn` to prevent the script from waiting
+
+## invite text
+
+If you're running this session, here is a template for an invite description:
+
+```
+This session's focus is to introduce container orchestration using Docker Swarm, but will also briefly review container images, containers, container runtimes, and the underlying technology that makes it work.
+
+The second part of the session is optionally interactive. You can watch, but participation on your own machine is encouraged. The interactive session covers:
+
+- Turning your computer into a one-node swarm
+- Connect services with encrypted overlay networks
+- Build and deploy a simple application stack
+- Explore container isolation
+- Exploit a RCE vuln in two different deploy scenarios
+
+If you wish to participate in the second part of the session, please do this ahead of time:
+
+1. Clone the repo: 
+    `git clone https://github.com/dustin-decker/talks.git`
+2. Cache the Docker images: 
+    `cd talks/swarm-intro/; ./00-cache-images.sh`
+3. Before the presentation begins, pull the latest changes:
+    `git pull`
+```
