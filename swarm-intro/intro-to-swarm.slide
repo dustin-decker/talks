@@ -46,8 +46,6 @@ https://github.com/opencontainers/runtime-spec
 
 .image resources/slides/docker-daemon.png _ 400
 
-* stacks -> services -> containers -> images
-
 * what's good about containers
 
 developer perspective 
@@ -63,6 +61,7 @@ operational perspective
 
 * orchestrators
 
+- orchestrator -> stacks -> services -> containers -> images
 - distribute and manage applications over a pool of compute resources
 - typically arrange network connectivity
 - configuration drives automatic orchestration of complex systems
