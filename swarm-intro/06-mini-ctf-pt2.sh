@@ -27,7 +27,7 @@ pe "docker stack deploy -c rce-stack.yml rce-stack"
 pe "docker stack ls"
 pe "watch docker stack ps rce-stack"
 
-p "# loadbalancing demonstration on the published port"
+p "# try exploiting the RCE again"
 pe "curl '127.0.0.1:666?cmd=/bin/cat&args=/etc/passwd'"
 
 p "# the only application in this container is the application we want to deploy so glhf with your RCE"
