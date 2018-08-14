@@ -11,8 +11,10 @@
 #
 ###############################################################################
 
+DEMO_PROMPT="${GREEN}➜ ${CYAN}\W "
+
 # the speed to "type" the text
-TYPE_SPEED=20
+TYPE_SPEED=65
 
 # no wait after "p" or "pe"
 NO_WAIT=false

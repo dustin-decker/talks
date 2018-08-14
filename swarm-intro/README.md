@@ -8,7 +8,7 @@ Otherwise, go here for it to be rendered for you: https://talks.godoc.org/github
 
 ## begin interactive intro
 
-*requirement:* have a working Docker installation, preferably newer than v18.03
+**requirement:** have a working Docker installation, preferably newer than v18.03
 
 ```
 ➜  swarm-intro git:(master) ✗ ls *.sh
