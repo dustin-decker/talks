@@ -63,6 +63,7 @@ operational perspective
 - includes same concerns as developer
 - consistent interfaces for configuration and logging
 - efficient resource utilization
+- reduced attack surface
 
 
 * orchestrators
