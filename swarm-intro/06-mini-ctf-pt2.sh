@@ -7,7 +7,7 @@ clear
 
 
 echo "Docker Swarm introduction"
-echo "05 - mini ctf"
+echo "06 - mini ctf"
 echo "Press ENTER to begin"
 
 p "# we're going to own a container with a RCE vuln"
