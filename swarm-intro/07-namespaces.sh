@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 
 echo "Docker Swarm introduction"
@@ -28,3 +27,5 @@ pe "docker run --net container:$(docker ps -q --filter name=rce-stack_rce.1) nic
 p "# this is one way you could get access to network troubleshooting tools without having to add unnecessary binaries to your production images"
 
 pe "docker stack rm rce-stack"
+
+p ""

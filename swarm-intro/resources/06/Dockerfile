@@ -1,8 +1,6 @@
 ## build env image
 
-FROM golang:1.10-alpine3.8 as builder
-# add a user now so we can copy /etc/passwd into the scratch production image
-RUN adduser -D -u 59999 container-user
+FROM golang as builder
 WORKDIR /go/src/github.com/dustin-decker/talks/swarm/resources/05/
 COPY RCE.go .
 # compile static binary w/o dependency on libc
@@ -20,5 +18,5 @@ COPY --from=builder /etc/passwd /etc/passwd
 COPY --from=builder /go/src/github.com/dustin-decker/talks/swarm/resources/05/app .
 EXPOSE 8000
 # drop privileges
-USER container-user
+USER nobody
 ENTRYPOINT ["/app"]

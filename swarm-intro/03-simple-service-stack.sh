@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 
 echo "Docker Swarm introduction"
@@ -31,3 +30,5 @@ p "# loadbalancing demonstration on the published port"
 pe "for i in {0..5}; do curl 127.0.0.1:666; echo '\n'; done"
 
 pe "docker stack rm test-stack"
+
+p ""

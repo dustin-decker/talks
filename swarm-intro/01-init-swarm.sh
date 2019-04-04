@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 
 echo "Docker Swarm introduction"
@@ -14,8 +13,6 @@ p "# let's make a swarm"
 
 pe "docker swarm init"
 
-pe "docker info | less"
-
-pe "docker swarm --help"
-
 pe "docker node ls"
+
+p ""

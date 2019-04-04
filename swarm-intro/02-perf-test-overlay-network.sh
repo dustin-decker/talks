@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 
 echo "Docker Swarm introduction"
@@ -14,7 +13,7 @@ p "# Docker Swarm has a simple CLI you can use for quick testing"
 p "# let's run an iperf benchmark over our encrypted overlay network"
 
 p "# first, create an encrypted overlay network"
-pe "docker network create --opt encrypted --driver overlay perf-test"
+pe "docker network create --opt encrypted=duh --driver overlay perf-test"
 pe "docker network ls"
 pe "docker network inspect perf-test | less"
 
@@ -31,3 +30,5 @@ pe "docker service logs perf-test-b"
 
 pe "docker service rm perf-test-a"
 pe "docker service rm perf-test-b"
+
+p ""

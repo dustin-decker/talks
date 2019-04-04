@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 echo "Docker Swarm introduction"
 echo "99 - Terminate Swarm and cleanup resources"
@@ -14,3 +13,5 @@ pe "docker swarm leave --force"
 
 p "# clean up resources"
 pe "docker system prune -af"
+
+p ""

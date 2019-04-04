@@ -38,6 +38,7 @@ https://github.com/opencontainers/runtime-spec
 - limit syscalls with *seccomp*
 - limit CPU and memory with *cgroups*
 - container has its own *rootfs* (via chroot and mounts)
+- disallow privilege escalation via SUID with `nosuid` mounts
 - container shares host kernel, but with kernel *namespaces* isolation:
     - PID
     - network
@@ -99,5 +100,4 @@ operational perspective
 
     git clone https://github.com/dustin-decker/talks.git
     cd talks/swarm-intro
-    ls *.sh
-    ./01-init-swarm.sh # run with -dn to prevent the script from waiting
+    for i in `ls *.sh`; do ./$i; done

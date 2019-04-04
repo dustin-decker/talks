@@ -3,7 +3,6 @@
 . ./resources/lib.sh
 clear
 
-# put your demo awesomeness below here
 
 
 echo "Docker Swarm introduction"
@@ -42,3 +41,5 @@ pe "docker container rm -f test-isolation"
 
 p "# set PID limit and blow a fork bomb"
 pe "docker run --rm -it --pids-limit=5 ubuntu bash -c ':(){ :|: & };:'"
+
+p ""
